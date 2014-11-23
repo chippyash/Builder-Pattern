@@ -74,7 +74,7 @@ Using the set... method has the advantage that it presents a fluent interface
 thus allowing you to chain setters together.
 
 In some circumstances, you may want to add some special processing to setting
-and getting.  Simply create a public setItemname($value) method or getItemName()
+and getting.  Simply create a public setItemname($value) method or getItemname()
 method.  Similarly you can provide a hasItemname() method to override default isset()
 behaviour.
 
@@ -181,7 +181,7 @@ class CustomerDirector extends AbstractDirector
 
 By default, the AbstractDirector knows about and supports two events, 
 
-* ModifiableInterface:l:PHASE_PRE_BUILD
+* ModifiableInterface::PHASE_PRE_BUILD
 * ModifiableInterface::PHASE_POST_BUILD
 
 These are triggered just before build commences and just after success of the build 
@@ -269,7 +269,7 @@ implementing the RendererInterface.  Some ideas:
 
 * creation of configured objects (although this is usually better handled through
 a dependency injection container; Symfony provides a good one. However, the 
-BuilderPattern allows for in-app object construction, rather than application
+BuilderPattern allows for in-app object construction, rather than at application
 start.)
 * creating diagrams via an SVG implementation
 * firing commands to external processes (I've used this to create entries on a
@@ -343,3 +343,4 @@ Check out [chippyash/Math-Type-Calculator](https://github.com/chippyash/Math-Typ
 ## Version history
 
 1.0.0 - initial version
+1.0.1 - integrate travis and coveralls
