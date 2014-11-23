@@ -1,0 +1,54 @@
+@startuml
+title Builder Pattern Classes
+namespace chippyash.BuilderPattern {
+
+    interface RendererInterface
+    interface BuilderInterface
+    interface DirectorInterface
+    interface ModifiableInterface
+
+    namespace Renderer {
+        class JsonRenderer
+        class PassthruRenderer
+        class XmlRenderer
+    }
+
+    namespace Exceptions {
+        class BuilderPatternException
+    }
+
+    abstract AbstractBuilder
+    abstract AbstractCollectionBuilder
+    abstract AbstractDirector
+    class Modifier
+
+    RendererInterface <|-- Renderer.JsonRenderer
+    RendererInterface <|-- Renderer.PassthruRenderer
+    RendererInterface <|-- Renderer.XmlRenderer
+
+    BuilderInterface <|-- AbstractBuilder
+    ModifiableInterface <|-- AbstractBuilder
+    AbstractBuilder <|-- AbstractCollectionBuilder
+    DirectorInterface <|-- AbstractDirector
+    BuilderInterface <.. DirectorInterface
+    Modifier <.. AbstractBuilder
+    RendererInterface <.. AbstractDirector
+    BuilderInterface <.. AbstractDirector
+    Exceptions.BuilderPatternException <.. AbstractBuilder
+}
+
+namespace Zend.EventManager {
+    interface EventManagerAwareInterface
+    class ResponseCollection
+    class Event
+}
+
+namespace Zend.Json {
+    class Json
+}
+
+Zend.Json.Json <.. Renderer.JsonRenderer
+Zend.EventManager.EventManagerAwareInterface <|-- chippyash.BuilderPattern.Modifier
+Zend.EventManager.ResponseCollection <.. chippyash.BuilderPattern.Modifier
+Zend.EventManager.Event <.. chippyash.BuilderPattern.AbstractBuilder
+@enduml

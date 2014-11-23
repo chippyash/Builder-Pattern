@@ -1,0 +1,31 @@
+{
+    "name": "chippyash/builderpattern",
+    "description": "Builder Pattern",
+    "keywords": ["builder", "pattern", "design"],
+    "license": "GPL 3.0",
+    "authors": [
+        {
+            "name": "Ashley Kitson",
+            "email": "ashley@zf4.biz"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "zendframework/zend-eventmanager": "~2.3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.3",
+        "phpunit/phpunit-skeleton-generator": "dev-master",
+        "satooshi/php-coveralls" : "dev-master",
+        "zendframework/zend-debug" : "~2.3.3",
+        "zendframework/zend-json" : "~2.3.3"
+    },
+    "suggest" : {
+        "zendframework/zend-json" : "To use the Json Renderer"
+    },
+    "autoload": {
+        "psr-0": {
+            "chippyash\\BuilderPattern\\": "src"
+        }
+    }
+}
