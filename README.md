@@ -289,7 +289,7 @@ NB. Make sure you rebase to HEAD before your pull request
 ## Where?
 
 The library is hosted at [Github](https://github.com/chippyash/Builder-Pattern).
-It is available at [Packagist.org](https://packagist.org/packages/chippyash/builder-pattern) as a
+It is available at [Packagist.org](https://packagist.org/packages/chippyash/builderpattern) as a
 [Composable](https://getcomposer.org/) module
 
 ### Installation
@@ -311,7 +311,7 @@ to your composer.json "requires" section.
 Clone this repo, and then run Composer in local repo root to pull in dependencies
 
 <pre>
-    git clone git@github.com:chippyash/builder-pattern.git DataBuilder
+    git clone git@github.com:chippyash/Builder-Pattern.git DataBuilder
     cd DataBuilder
     composer install --dev
 </pre>
