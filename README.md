@@ -12,6 +12,10 @@ The library is released under the [GNU GPL V3 or later license](http://www.gnu.o
 
 If you have [PlantUML](http://plantuml.sourceforge.net/) installed, you can view the UML diagrams in the docs folder
 
+## QA
+
+[![Build Status](https://travis-ci.org/chippyash/Builder-Pattern.svg?branch=master)](https://travis-ci.org/chippyash/Builder-Pattern)
+[![Coverage Status](https://coveralls.io/repos/chippyash/Builder-Pattern/badge.png)](https://coveralls.io/r/chippyash/Builder-Pattern)
 ## Why
 
 Solve the problem once!  The requirement was to have a builder pattern implementation 
