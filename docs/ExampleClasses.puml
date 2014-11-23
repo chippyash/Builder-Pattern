@@ -1,0 +1,39 @@
+@startuml
+title Classes used in the example
+
+namespace chippyash.BuilderPattern {
+    abstract class AbstractBuilder
+    abstract class AbstractCollectionBuilder
+    abstract class AbstractDirector
+    class Modifier
+
+    namespace Example {
+
+        namespace Builder {
+            class AccountBuilder
+            class CustomerBuilder
+            class ItemBuilder
+            class PurchaseCollectionBuilder
+
+            PurchaseCollectionBuilder --* ItemBuilder
+            AccountBuilder --o PurchaseCollectionBuilder
+            CustomerBuilder --o AccountBuilder
+        }
+
+        namespace Director {
+            class CustomerDirector
+        }
+
+        Director.CustomerDirector --o Builder.CustomerBuilder
+        Builder.CustomerBuilder --|> chippyash.BuilderPattern.AbstractBuilder
+        Builder.AccountBuilder --|> chippyash.BuilderPattern.AbstractBuilder
+        Builder.ItemBuilder --|> chippyash.BuilderPattern.AbstractBuilder
+        chippyash.BuilderPattern.AbstractCollectionBuilder <|-- Builder.PurchaseCollectionBuilder
+        chippyash.BuilderPattern.AbstractDirector <|-- Director.CustomerDirector
+        chippyash.BuilderPattern.Modifier o-- Director.CustomerDirector
+    }
+
+    AbstractBuilder <|-- AbstractCollectionBuilder
+
+}
+@enduml
