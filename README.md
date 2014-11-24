@@ -15,7 +15,8 @@ If you have [PlantUML](http://plantuml.sourceforge.net/) installed, you can view
 ## QA
 
 [![Build Status](https://travis-ci.org/chippyash/Builder-Pattern.svg?branch=master)](https://travis-ci.org/chippyash/Builder-Pattern)
-[![Coverage Status](https://coveralls.io/repos/chippyash/Builder-Pattern/badge.png)](https://coveralls.io/r/chippyash/Builder-Pattern)
+[![Coverage Status](https://coveralls.io/repos/chippyash/Builder-Pattern/badge.png?branch=master)](https://coveralls.io/r/chippyash/Builder-Pattern?branch=master)
+
 ## Why
 
 Solve the problem once!  The requirement was to have a builder pattern implementation 
