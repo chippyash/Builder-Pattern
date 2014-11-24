@@ -343,4 +343,7 @@ Check out [chippyash/Math-Type-Calculator](https://github.com/chippyash/Math-Typ
 ## Version history
 
 1.0.0 - initial version
+
 1.0.1 - integrate travis and coveralls
+
+1.0.2 - complete test pack

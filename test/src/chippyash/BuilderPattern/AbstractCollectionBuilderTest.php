@@ -56,6 +56,16 @@ class AbstractCollectionBuilderTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals([$builder], $this->object->getCollection());
     }
     
+    public function testSettingTheCollectionWillClearPreviousCollection()
+    {
+        $builder1 = $this->getMock('chippyash\BuilderPattern\BuilderInterface');
+        $builder2 = $this->getMock('chippyash\BuilderPattern\BuilderInterface');
+        $collection1 = [$builder1];
+        $collection2 = [$builder1, $builder2];
+        $this->object->setCollection($collection1)->setCollection($collection2);
+        $this->assertEquals($collection2, $this->object->getCollection());
+    }
+    
     public function testCanSetModifier()
     {
         $modifier = $this->getMock('Zend\EventManager\EventManagerAwareInterface');
@@ -78,5 +88,17 @@ class AbstractCollectionBuilderTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('Zend\EventManager\ResponseCollection', $this->object->modify());
     }
 
-
+    public function testSettingTheModiferWillTrickleDownToCollectionBuilders()
+    {
+        $modifier = $this->getMock('Zend\EventManager\EventManagerAwareInterface');
+        $buildItem = $this->getMockForAbstractClass('\chippyash\BuilderPattern\AbstractBuilder');
+        $this->object->setCollection([$buildItem]);
+        $this->object->setModifier($modifier);
+        
+        $refl = new \ReflectionObject($buildItem);
+        $prop = $refl->getProperty('modifier');
+        $prop->setAccessible(true);
+        $this->assertEquals($modifier, $prop->getValue($buildItem));
+    }
+    
 }

@@ -68,7 +68,7 @@ abstract class AbstractDirector implements DirectorInterface, ModifiableInterfac
      * Build and render
      *
      * @return mixed Depends on rendering
-     * @throws \chippyash\BuilderPattern\Exceptions\BuildPatternException
+     * @throws \chippyash\BuilderPattern\Exceptions\BuilderPatternException
      */
     public function build()
     {
@@ -91,9 +91,7 @@ abstract class AbstractDirector implements DirectorInterface, ModifiableInterfac
     public function setModifier(EventManagerAwareInterface $modifier)
     {
         $this->modifier = $modifier;
-        if ($this->builder instanceof chippyash\BuilderPattern\ModifiableInterface) {
-            $this->builder->setModifier($modifier);
-        }
+        $this->builder->setModifier($modifier);
         
         return $this;
     }
