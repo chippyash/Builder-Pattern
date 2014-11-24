@@ -65,7 +65,7 @@ Under normal circumstances, you can reference your builder items using
 
 <pre>
     $builder->itemname = $value
-    $value - $builder->itemname
+    $value = $builder->itemname
     //or
     $builder->SetItemname($value)
     $value = $builder->getItemname()
