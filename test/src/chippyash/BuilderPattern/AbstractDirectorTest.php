@@ -4,8 +4,13 @@
  */
 namespace chippyash\Test\BuilderPattern;
 
+include_once __DIR__ . '/Stub/BadBuilder.php';
+include_once __DIR__ . '/Stub/DirectorWithModifier.php';
+
 use chippyash\BuilderPattern\AbstractDirector;
-use chippyash\BuilderPattern\BuilderModifer;
+use chippyash\Test\BuilderPattern\Stub\BadBuilder;
+use chippyash\Test\BuilderPattern\Stub\DirectorWithModifier;
+use chippyash\BuilderPattern\ModifiableInterface;
 
 class AbstractDirectorTest extends \PHPUnit_Framework_TestCase
 {
@@ -30,7 +35,7 @@ class AbstractDirectorTest extends \PHPUnit_Framework_TestCase
     
     protected function setUp()
     {
-        $this->builder = $this->getMock('chippyash\BuilderPattern\BuilderInterface');
+        $this->builder = $this->getMockForAbstractClass('chippyash\BuilderPattern\AbstractBuilder');
         $this->renderer = $this->getMock('chippyash\BuilderPattern\RendererInterface');
         $this->object = $this->getMockForAbstractClass(
                 'chippyash\BuilderPattern\AbstractDirector',
@@ -40,9 +45,6 @@ class AbstractDirectorTest extends \PHPUnit_Framework_TestCase
     public function testBuildWillReturnValueIfBuildSucceeds()
     {
         $test = ['foo' => 'bar'];
-        $this->builder->expects($this->once())
-                ->method('build')
-                ->will($this->returnValue(true));
         $this->renderer->expects($this->once())
                 ->method('render')
                 ->will($this->returnValue($test));
@@ -56,11 +58,11 @@ class AbstractDirectorTest extends \PHPUnit_Framework_TestCase
      */
     public function testBuildWillThrowExceptionIfBuildFails()
     {
-        $this->builder->expects($this->once())
-                ->method('build')
-                ->will($this->returnValue(false));
-        
-        $this->object->build();
+        $object = $this->getMockForAbstractClass(
+                'chippyash\BuilderPattern\AbstractDirector',
+                [new BadBuilder(), $this->renderer]);
+
+        $object->build();
     }
     
     public function testSettingAModifierWillSetTheModifier()
@@ -100,5 +102,24 @@ class AbstractDirectorTest extends \PHPUnit_Framework_TestCase
                 'Zend\EventManager\ResponseCollection', 
                 $test);
         $this->assertEquals(0, $test->count());
+    }
+    
+    public function testCanAddModifications()
+    {
+        $object = new DirectorWithModifier($this->builder, $this->renderer);
+        $object->addMod(['name' => 'bar'], ModifiableInterface::PHASE_PRE_BUILD);
+        $object->addMod('foo', ModifiableInterface::PHASE_POST_BUILD);
+        $refl = new \ReflectionObject($object);
+        $prop = $refl->getProperty('modifications');
+        $prop->setAccessible(true);
+        
+        $expected = [ModifiableInterface::PHASE_PRE_BUILD => [['name' => 'bar']],
+                     ModifiableInterface::PHASE_POST_BUILD => [['name' => 'foo']]];
+        $this->assertEquals($expected, $prop->getValue($object));
+        
+        $this->renderer->expects($this->once())
+                ->method('render')
+                ->will($this->returnValue(true));
+        $this->assertTrue($object->build());
     }
 }

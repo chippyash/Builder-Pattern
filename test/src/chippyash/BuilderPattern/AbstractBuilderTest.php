@@ -7,10 +7,12 @@ namespace chippyash\Test\BuilderPattern;
 require_once __DIR__ . '/Stub/BuilderWithSetter.php';
 require_once __DIR__ . '/Stub/BuilderWithGetter.php';
 require_once __DIR__ . '/Stub/BuilderWithDiscovery.php';
+include_once __DIR__ . '/Stub/BuilderWithModifier.php';
 
 use chippyash\Test\BuilderPattern\Stub\BuilderWithSetter;
 use chippyash\Test\BuilderPattern\Stub\BuilderWithGetter;
 use chippyash\Test\BuilderPattern\Stub\BuilderWithDiscovery;
+use chippyash\Test\BuilderPattern\Stub\BuilderWithModifier;
 
 class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
 {
@@ -28,7 +30,8 @@ class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
     protected $params = array(
             'foo' => null,
             'bar' => null,
-            'baz' => null
+            'baz' => null,
+            'modifiable' => null
         );
     
     /**
@@ -191,6 +194,19 @@ class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($modifier, $prop->getValue($this->object));
     }
 
+    public function testSettingTheModiferWillTrickleDownToChildBuilders()
+    {
+        $modifier = $this->getMock('Zend\EventManager\EventManagerAwareInterface');
+        $buildItem = $this->getMockForAbstractClass('\chippyash\BuilderPattern\AbstractBuilder');
+        $this->object->setModifiable($buildItem)
+                ->setModifier($modifier);
+        
+        $refl = new \ReflectionObject($buildItem);
+        $prop = $refl->getProperty('modifier');
+        $prop->setAccessible(true);
+        $this->assertEquals($modifier, $prop->getValue($buildItem));
+    }
+    
     public function testCanCallModifyToTriggerEvents()
     {
         $modifier = $this->getMock('Zend\EventManager\EventManagerAwareInterface');
@@ -201,6 +217,22 @@ class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
         
         $this->assertInstanceOf('Zend\EventManager\ResponseCollection', $this->object->modify());
     }
+    
+    public function testCallingModifyIfNoModifierSetWillReturnEmptyResponseCollection()
+    {
+        $response = $this->object->modify();
+        $this->assertInstanceOf('Zend\EventManager\ResponseCollection', $response);
+        $this->assertEquals(0, $response->count());
+    }
 
-
+    public function testBuildWillReturnFalseIfBuildFails()
+    {
+        $subBuilder = $this->getMock('chippyash\BuilderPattern\BuilderInterface');
+        $subBuilder->expects($this->once())
+                ->method('build')
+                ->will($this->returnValue(false));
+        $builder = new BuilderWithModifier();
+        $builder->foo = $subBuilder;
+        $this->assertFalse($builder->build());
+    }
 }
