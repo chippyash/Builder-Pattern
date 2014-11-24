@@ -306,7 +306,7 @@ Install [Composer] (https://getcomposer.org/)
 add
 
 <pre>
-    "chippyash/builder-databuilder": "~1.0"
+    "chippyash/builderpattern": "~1.0"
 </pre>
 
 to your composer.json "requires" section.
