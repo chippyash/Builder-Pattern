@@ -10,7 +10,9 @@ for PHP.
 
 The library is released under the [GNU GPL V3 or later license](http://www.gnu.org/copyleft/gpl.html)
 
-If you have [PlantUML](http://plantuml.sourceforge.net/) installed, you can view the UML diagrams in the docs folder
+If you have [PlantUML](http://plantuml.sourceforge.net/) installed, you can view the UML diagrams in the docs folder.
+
+See the test contract in the docs folder.
 
 ## QA
 
@@ -341,6 +343,8 @@ Check out [chippyash/Logical-Matrix](https://github.com/chippyash/Logical-matrix
 
 Check out [chippyash/Math-Type-Calculator](https://github.com/chippyash/Math-Type-Calculator) for arithmetic operations on aforementioned strong types
 
+Check out [chippyash/Testdox-Converter](https://github.com/chippyash/Testdox-Converter). A php unit testdox to markdown converter
+
 ## Version history
 
 1.0.0 - initial version
@@ -348,3 +352,5 @@ Check out [chippyash/Math-Type-Calculator](https://github.com/chippyash/Math-Typ
 1.0.1 - integrate travis and coveralls
 
 1.0.2 - complete test pack
+
+1.0.3 - add test contract
