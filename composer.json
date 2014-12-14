@@ -3,6 +3,7 @@
     "description": "Builder Pattern",
     "keywords": ["builder", "pattern", "design"],
     "license": "GPL 3.0",
+    "homepage" : "http://the-matrix.github.io/",
     "authors": [
         {
             "name": "Ashley Kitson",
