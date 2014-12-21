@@ -21,7 +21,8 @@ class CustomerBuilder extends AbstractBuilder
     {
         $this->buildItems = [
             'name' => '',
-            'account' => new AccountBuilder()
+            'account' => new AccountBuilder(),
+            'exportName' => function(){return 'BuilderPattern!';}
         ];
     }
 

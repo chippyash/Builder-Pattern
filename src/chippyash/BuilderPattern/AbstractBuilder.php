@@ -60,6 +60,8 @@ abstract class AbstractBuilder implements BuilderInterface, ModifiableInterface
                     return false;
                 }
                 $this->dataObject[$name] = $this->buildItems[$name]->getResult();
+            } elseif (is_callable($value)) {
+                $this->dataObject[$name] = $value();
             } else {
                 $this->dataObject[$name] = $this->buildItems[$name];
             }
