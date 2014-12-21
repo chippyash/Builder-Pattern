@@ -1,14 +1,15 @@
-# chippyash\Builder-Pattern
+# Chippyash Builder Pattern
 
 ## chippyash\Test\BuilderPattern\AbstractBuilder
 
 *  Get data object returns array
 *  Setting simple value will store in builder parameters
+*  Setting a closure for a parameter will store result of closure
 *  Setting a builder for a parameter will build nested array
-*  Builder will use set method if one is avalaible
+*  Builder will use set method if one is available
 *  Builder will proxy to set if set method not found
 *  Set will throw exception for unknown parameter
-*  Builder will use get method if one is avalaible
+*  Builder will use get method if one is available
 *  Builder will proxy to get if get method not found
 *  Get will throw exception for unknown parameter
 *  Isset will return true for parameter that has value
@@ -16,7 +17,7 @@
 *  Isset will return false for unknown parameter
 *  Unset will set parameter to null
 *  Unset will throw exception for unknown parameter
-*  Builder will use discovery method if one is avalaible
+*  Builder will use discovery method if one is available
 *  Builder will proxy to isset if discovery method not found
 *  Method proxy will throw exception if method not supported
 *  Can set modifier
@@ -41,7 +42,6 @@
 *  Build will return value if build succeeds
 *  Build will throw exception if build fails
 *  Setting a modifier will set the modifier
-*  Setting a modifier will propagate to builders if they are modifiable
 *  Calling modify will return an empty zend event response collection if modifier not set
 *  Calling modify will return a zend event response collection if modifier set
 *  Can add modifications

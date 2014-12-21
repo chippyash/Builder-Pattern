@@ -76,11 +76,6 @@ class AbstractDirectorTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($prop->getValue($this->object), $modifier);
     }
     
-    public function testSettingAModifierWillPropagateToBuildersIfTheyAreModifiable()
-    {
-        $this->markTestIncomplete('create test when builders are modifiable');
-    }
-    
     public function testCallingModifyWillReturnAnEmptyZendEventResponseCollectionIfModifierNotSet()
     {
         $test = $this->object->modify();

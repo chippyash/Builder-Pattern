@@ -64,6 +64,15 @@ class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($test, $this->object->getResult());
     }
 
+    public function testSettingAClosureForAParameterWillStoreResultOfClosure()
+    {
+        $this->object->foo = function(){return true;};
+        $this->assertTrue($this->object->build());
+        $test = $this->params;
+        $test['foo'] = true;
+        $this->assertEquals($test, $this->object->getResult());
+    }
+    
     public function testSettingABuilderForAParameterWillBuildNestedArray()
     {
         $newBuilder = $this->getMockForAbstractClass('\chippyash\BuilderPattern\AbstractBuilder');
@@ -80,7 +89,7 @@ class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($test, $this->object->getResult());
     }
     
-    public function testBuilderWillUseSetMethodIfOneIsAvalaible()
+    public function testBuilderWillUseSetMethodIfOneIsAvailable()
     {
         $object = new BuilderWithSetter();
         $object->setFoo('bar');
@@ -103,7 +112,7 @@ class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
     }
     
     
-    public function testBuilderWillUseGetMethodIfOneIsAvalaible()
+    public function testBuilderWillUseGetMethodIfOneIsAvailable()
     {
         $object = new BuilderWithGetter();
         $object->setFoo('bar');
@@ -158,7 +167,7 @@ class AbstractBuilderTest extends \PHPUnit_Framework_TestCase
         unset($this->object->bob);
     }
 
-    public function testBuilderWillUseDiscoveryMethodIfOneIsAvalaible()
+    public function testBuilderWillUseDiscoveryMethodIfOneIsAvailable()
     {
         $object = new BuilderWithDiscovery();
         $this->assertFalse(isset($object->foo));
