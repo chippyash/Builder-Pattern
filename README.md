@@ -345,3 +345,5 @@ Check out the other packages at [my blog site](http://the-matrix.github.io/packa
 1.0.3 - add test contract
 
 1.1.0 - new feature: allow use of closures as build items
+
+1.1.1 - make library agnostic of Zend-EventManager version

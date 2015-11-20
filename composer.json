@@ -12,14 +12,14 @@
     ],
     "require": {
         "php": ">=5.5",
-        "zendframework/zend-eventmanager": "~2.3.3"
+        "zendframework/zend-eventmanager": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.3",
         "phpunit/phpunit-skeleton-generator": "dev-master",
         "satooshi/php-coveralls" : "dev-master",
-        "zendframework/zend-debug" : "~2.3.3",
-        "zendframework/zend-json" : "~2.3.3"
+        "zendframework/zend-debug" : "*",
+        "zendframework/zend-json" : "*"
     },
     "suggest" : {
         "zendframework/zend-json" : "To use the Json Renderer"
