@@ -2,11 +2,11 @@
 /*
  * Test stubs
  */
-namespace chippyash\Test\BuilderPattern\Stub;
+namespace Chippyash\Test\BuilderPattern\Stub;
 
-use chippyash\BuilderPattern\AbstractBuilder;
-use chippyash\BuilderPattern\Modifier;
-use chippyash\BuilderPattern\ModifiableInterface;
+use Chippyash\BuilderPattern\AbstractBuilder;
+use Chippyash\BuilderPattern\Modifier;
+use Chippyash\BuilderPattern\ModifiableInterface;
 
 /**
  * Builder with modifiable behavior

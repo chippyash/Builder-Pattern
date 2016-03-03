@@ -2,9 +2,9 @@
 /*
  * Test stubs
  */
-namespace chippyash\Test\BuilderPattern\Stub;
+namespace Chippyash\Test\BuilderPattern\Stub;
 
-use chippyash\BuilderPattern\AbstractDirector;
+use Chippyash\BuilderPattern\AbstractDirector;
 
 /**
  * Director with modifiable behavior

@@ -1,6 +1,6 @@
 @startuml
 title Builder Pattern Classes
-namespace chippyash.BuilderPattern {
+namespace Chippyash.BuilderPattern {
 
     interface RendererInterface
     interface BuilderInterface
@@ -48,7 +48,7 @@ namespace Zend.Json {
 }
 
 Zend.Json.Json <.. Renderer.JsonRenderer
-Zend.EventManager.EventManagerAwareInterface <|-- chippyash.BuilderPattern.Modifier
-Zend.EventManager.ResponseCollection <.. chippyash.BuilderPattern.Modifier
-Zend.EventManager.Event <.. chippyash.BuilderPattern.AbstractBuilder
+Zend.EventManager.EventManagerAwareInterface <|-- Chippyash.BuilderPattern.Modifier
+Zend.EventManager.ResponseCollection <.. Chippyash.BuilderPattern.Modifier
+Zend.EventManager.Event <.. Chippyash.BuilderPattern.AbstractBuilder
 @enduml

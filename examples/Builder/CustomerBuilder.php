@@ -7,10 +7,10 @@
  * @licence GPL V3 or later : http://www.gnu.org/licenses/gpl.html
  * @link http://en.wikipedia.org/wiki/Builder_pattern
  */
-namespace chippyash\BuilderPattern\Example\Builder;
+namespace Chippyash\BuilderPattern\Example\Builder;
 
-use chippyash\BuilderPattern\AbstractBuilder;
-use chippyash\BuilderPattern\Example\Builder\AccountBuilder;
+use Chippyash\BuilderPattern\AbstractBuilder;
+use Chippyash\BuilderPattern\Example\Builder\AccountBuilder;
 
 /**
  * Builder for a customer

@@ -8,7 +8,7 @@
  * @link http://en.wikipedia.org/wiki/Builder_pattern
  */
 
-namespace chippyash\BuilderPattern;
+namespace Chippyash\BuilderPattern;
 
 /**
  * Interface for a Builder

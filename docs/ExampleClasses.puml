@@ -1,7 +1,7 @@
 @startuml
 title Classes used in the example
 
-namespace chippyash.BuilderPattern {
+namespace Chippyash.BuilderPattern {
     abstract class AbstractBuilder
     abstract class AbstractCollectionBuilder
     abstract class AbstractDirector
@@ -25,12 +25,12 @@ namespace chippyash.BuilderPattern {
         }
 
         Director.CustomerDirector --o Builder.CustomerBuilder
-        Builder.CustomerBuilder --|> chippyash.BuilderPattern.AbstractBuilder
-        Builder.AccountBuilder --|> chippyash.BuilderPattern.AbstractBuilder
-        Builder.ItemBuilder --|> chippyash.BuilderPattern.AbstractBuilder
-        chippyash.BuilderPattern.AbstractCollectionBuilder <|-- Builder.PurchaseCollectionBuilder
-        chippyash.BuilderPattern.AbstractDirector <|-- Director.CustomerDirector
-        chippyash.BuilderPattern.Modifier o-- Director.CustomerDirector
+        Builder.CustomerBuilder --|> Chippyash.BuilderPattern.AbstractBuilder
+        Builder.AccountBuilder --|> Chippyash.BuilderPattern.AbstractBuilder
+        Builder.ItemBuilder --|> Chippyash.BuilderPattern.AbstractBuilder
+        Chippyash.BuilderPattern.AbstractCollectionBuilder <|-- Builder.PurchaseCollectionBuilder
+        Chippyash.BuilderPattern.AbstractDirector <|-- Director.CustomerDirector
+        Chippyash.BuilderPattern.Modifier o-- Director.CustomerDirector
     }
 
     AbstractBuilder <|-- AbstractCollectionBuilder

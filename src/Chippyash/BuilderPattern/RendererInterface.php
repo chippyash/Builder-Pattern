@@ -7,9 +7,9 @@
  * @licence GPL V3 or later : http://www.gnu.org/licenses/gpl.html
  * @link http://en.wikipedia.org/wiki/Builder_pattern
  */
-namespace chippyash\BuilderPattern;
+namespace Chippyash\BuilderPattern;
 
-use chippyash\BuilderPattern\BuilderInterface;
+use Chippyash\BuilderPattern\BuilderInterface;
 
 /**
  * Builder renderer interface

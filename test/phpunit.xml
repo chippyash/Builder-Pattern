@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-PHPUnit configuration file to run chippyash\builder-pattern
+PHPUnit configuration file to run Chippyash\builder-pattern
 -->
 
 <!--
@@ -30,7 +30,6 @@ testSuiteLoaderFile="/path/to/StandardTestSuiteLoader.php"
          timeoutForSmallTests="1"
          timeoutForMediumTests="10"
          timeoutForLargeTests="60"
-         strict="false"
          verbose="false">
 
     <!--
@@ -42,11 +41,11 @@ testSuiteLoaderFile="/path/to/StandardTestSuiteLoader.php"
             <!-- don't cover vendor directory - someone else's code! -->
             <directory>../vendor</directory>
             <!-- don't cover interfaces- nothing to test! -->
-            <file>../src/chippyash/BuilderPattern/*Interface.php</file>
+            <file>../src/Chippyash/BuilderPattern/*Interface.php</file>
             <!-- don't cover exceptions - banal! -->
-            <directory>../src/chippyash/BuilderPattern/Exceptions</directory>
+            <directory>../src/Chippyash/BuilderPattern/Exceptions</directory>
             <!-- don't cover test stubs -->
-            <directory>./src/chippyash/BuilderPattern/Stub</directory>
+            <directory>./src/Chippyash/BuilderPattern/Stub</directory>
         </blacklist>
     </filter>
 

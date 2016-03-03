@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-PHPUnit configuration file to run chippyash\Matrix tests
+PHPUnit configuration file to run Chippyash\Matrix tests
 -->
 
 <!--
@@ -30,11 +30,10 @@ testSuiteLoaderFile="/path/to/StandardTestSuiteLoader.php"
          timeoutForSmallTests="1"
          timeoutForMediumTests="10"
          timeoutForLargeTests="60"
-         strict="false"
          verbose="false">
 
     <testsuites>
-        <testsuite name="chippyash/Matrix Test Suite">
+        <testsuite name="Chippyash/Matrix Test Suite">
             <directory phpVersion="5.4.0" phpVersionOperator=">=">./test/src/</directory>
         </testsuite>
     </testsuites>
@@ -46,11 +45,11 @@ testSuiteLoaderFile="/path/to/StandardTestSuiteLoader.php"
         <blacklist>
             <directory>./vendor</directory>
             <!-- don't cover interfaces- nothing to test! -->
-            <file>./src/chippyash/BuilderPattern/*Interface.php</file>
+            <file>./src/Chippyash/BuilderPattern/*Interface.php</file>
             <!-- don't cover exceptions - banal! -->
-            <directory>./src/chippyash/BuilderPattern/Exceptions</directory>
+            <directory>./src/Chippyash/BuilderPattern/Exceptions</directory>
             <!-- don't cover test stubs -->
-            <directory>./test/src/chippyash/BuilderPattern/Stub</directory>
+            <directory>./test/src/Chippyash/BuilderPattern/Stub</directory>
         </blacklist>
     </filter>
 

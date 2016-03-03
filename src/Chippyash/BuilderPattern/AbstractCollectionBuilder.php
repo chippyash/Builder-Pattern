@@ -7,11 +7,11 @@
  * @licence GPL V3 or later : http://www.gnu.org/licenses/gpl.html
  * @link http://en.wikipedia.org/wiki/Builder_pattern
  */
-namespace chippyash\BuilderPattern;
+namespace Chippyash\BuilderPattern;
 
-use chippyash\BuilderPattern\AbstractBuilder;
-use chippyash\BuilderPattern\BuilderInterface;
-use chippyash\BuilderPattern\ModifiableInterface;
+use Chippyash\BuilderPattern\AbstractBuilder;
+use Chippyash\BuilderPattern\BuilderInterface;
+use Chippyash\BuilderPattern\ModifiableInterface;
 use Zend\EventManager\EventManagerAwareInterface;
 
 /**
@@ -52,8 +52,8 @@ abstract class AbstractCollectionBuilder extends AbstractBuilder
     /**
      * Add a builder to the collection
      *
-     * @param chippyash\BuilderPattern\BuilderInterface $builder Builder to add to collection
-     * @return \chippyash\BuilderPattern\DataBuilder\AbstractCollectionBuilder Fluent Interface
+     * @param Chippyash\BuilderPattern\BuilderInterface $builder Builder to add to collection
+     * @return \Chippyash\BuilderPattern\DataBuilder\AbstractCollectionBuilder Fluent Interface
      */
     public function addBuilder(BuilderInterface $builder)
     {
@@ -67,7 +67,7 @@ abstract class AbstractCollectionBuilder extends AbstractBuilder
      * 
      * @param array $collection Array of BuilderInterface
      * 
-     * @return \chippyash\BuilderPattern\DataBuilder\AbstractCollectionBuilder Fluent Interface
+     * @return \Chippyash\BuilderPattern\DataBuilder\AbstractCollectionBuilder Fluent Interface
      */
     public function setCollection(array $collection)
     {
@@ -98,7 +98,7 @@ abstract class AbstractCollectionBuilder extends AbstractBuilder
      * Set a modifier for this builder
      * 
      * @param EventManagerAwareInterface $modifier
-     * @return \chippyash\BuilderPattern\AbstractModifiableBuilder
+     * @return \Chippyash\BuilderPattern\AbstractModifiableBuilder
      */
     public function setModifier(EventManagerAwareInterface $modifier)
     {

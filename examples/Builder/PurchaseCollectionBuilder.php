@@ -7,11 +7,11 @@
  * @licence GPL V3 or later : http://www.gnu.org/licenses/gpl.html
  * @link http://en.wikipedia.org/wiki/Builder_pattern
  */
-namespace chippyash\BuilderPattern\Example\Builder;
+namespace Chippyash\BuilderPattern\Example\Builder;
 
-use chippyash\BuilderPattern\AbstractCollectionBuilder;
-use chippyash\BuilderPattern\ModifiableInterface;
-use chippyash\BuilderPattern\Example\Builder\ItemBuilder;
+use Chippyash\BuilderPattern\AbstractCollectionBuilder;
+use Chippyash\BuilderPattern\ModifiableInterface;
+use Chippyash\BuilderPattern\Example\Builder\ItemBuilder;
 use Zend\EventManager\Event;
 use Zend\EventManager\EventManagerAwareInterface;
 

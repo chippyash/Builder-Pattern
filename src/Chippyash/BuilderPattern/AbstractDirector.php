@@ -7,13 +7,13 @@
  * @licence GPL V3 or later : http://www.gnu.org/licenses/gpl.html
  * @link http://en.wikipedia.org/wiki/Builder_pattern
  */
-namespace chippyash\BuilderPattern;
+namespace Chippyash\BuilderPattern;
 
-use chippyash\BuilderPattern\BuilderInterface;
-use chippyash\BuilderPattern\RendererInterface;
-use chippyash\BuilderPattern\DirectorInterface;
-use chippyash\BuilderPattern\ModifiableInterface;
-use chippyash\BuilderPattern\Exceptions\BuilderPatternException;
+use Chippyash\BuilderPattern\BuilderInterface;
+use Chippyash\BuilderPattern\RendererInterface;
+use Chippyash\BuilderPattern\DirectorInterface;
+use Chippyash\BuilderPattern\ModifiableInterface;
+use Chippyash\BuilderPattern\Exceptions\BuilderPatternException;
 use Zend\EventManager\ResponseCollection;
 use Zend\EventManager\EventManagerAwareInterface;
 
@@ -26,19 +26,19 @@ abstract class AbstractDirector implements DirectorInterface, ModifiableInterfac
 {
     /**
      *
-     * @var chippyash\BuilderPattern\BuilderInterface
+     * @var Chippyash\BuilderPattern\BuilderInterface
      */
     protected $builder;
     
     /**
      *
-     * @var chippyash\BuilderPattern\RendererInterface
+     * @var Chippyash\BuilderPattern\RendererInterface
      */
     protected $renderer;
 
     /**
      *
-     * @var chippyash\BuilderPattern\AbstractModifier
+     * @var Chippyash\BuilderPattern\AbstractModifier
      */
     protected $modifier;
     
@@ -55,8 +55,8 @@ abstract class AbstractDirector implements DirectorInterface, ModifiableInterfac
     /**
      * Constructor
      *
-     * @param \chippyash\BuilderPattern\BuilderInterface $builder
-     * @param \chippyash\BuilderPattern\RendererInterface $renderer
+     * @param \Chippyash\BuilderPattern\BuilderInterface $builder
+     * @param \Chippyash\BuilderPattern\RendererInterface $renderer
      */
     public function __construct(BuilderInterface $builder, RendererInterface $renderer)
     {
@@ -68,7 +68,7 @@ abstract class AbstractDirector implements DirectorInterface, ModifiableInterfac
      * Build and render
      *
      * @return mixed Depends on rendering
-     * @throws \chippyash\BuilderPattern\Exceptions\BuilderPatternException
+     * @throws \Chippyash\BuilderPattern\Exceptions\BuilderPatternException
      */
     public function build()
     {
@@ -86,7 +86,7 @@ abstract class AbstractDirector implements DirectorInterface, ModifiableInterfac
      * 
      * @param EventManagerAwareInterface $modifier
      * 
-     * @return chippyash\BuilderPattern\AbstractDirector Fluent Interface
+     * @return Chippyash\BuilderPattern\AbstractDirector Fluent Interface
      */
     public function setModifier(EventManagerAwareInterface $modifier)
     {
@@ -124,7 +124,7 @@ abstract class AbstractDirector implements DirectorInterface, ModifiableInterfac
      * @param array|mixed $mod  ['name'=>modName,...] or simply the modName
      * @param string $phase Phase name, usually one of ModifiableInterface::PHASE_...
      * 
-     * @return \chippyash\BuilderPattern\AbstractDirector Fluent Interface
+     * @return \Chippyash\BuilderPattern\AbstractDirector Fluent Interface
      */
     protected function addModification($mod, $phase = ModifiableInterface::PHASE_POST_BUILD)
     {

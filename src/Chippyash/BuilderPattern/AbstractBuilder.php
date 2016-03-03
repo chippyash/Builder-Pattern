@@ -7,10 +7,10 @@
  * @licence GPL V3 or later : http://www.gnu.org/licenses/gpl.html
  * @link http://en.wikipedia.org/wiki/Builder_pattern
  */
-namespace chippyash\BuilderPattern;
+namespace Chippyash\BuilderPattern;
 
-use chippyash\BuilderPattern\BuilderInterface;
-use chippyash\BuilderPattern\ModifiableInterface;
+use Chippyash\BuilderPattern\BuilderInterface;
+use Chippyash\BuilderPattern\ModifiableInterface;
 use Zend\EventManager\EventManagerAwareInterface;
 use Zend\EventManager\ResponseCollection;
 
@@ -84,7 +84,7 @@ abstract class AbstractBuilder implements BuilderInterface, ModifiableInterface
      * Set a modifier for this builder
      * 
      * @param EventManagerAwareInterface $modifier
-     * @return \chippyash\BuilderPattern\AbstractModifiableBuilder
+     * @return \Chippyash\BuilderPattern\AbstractModifiableBuilder
      */
     public function setModifier(EventManagerAwareInterface $modifier)
     {
@@ -143,7 +143,7 @@ abstract class AbstractBuilder implements BuilderInterface, ModifiableInterface
      *
      * @param string $key
      * @param mixed $value
-     * @return chippyash\BuilderPattern\SDO\SDOInterface Fluent Interface
+     * @return Chippyash\BuilderPattern\SDO\SDOInterface Fluent Interface
      * @throws \InvalidParameterException
      */
     public function __set($key, $value)
@@ -186,7 +186,7 @@ abstract class AbstractBuilder implements BuilderInterface, ModifiableInterface
      * Sets key value to null.
      *
      * @param string key
-     * @return \chippyash\BuilderPattern\DataBuilder\Builder\AbstractBuilder Fluent Interface
+     * @return \Chippyash\BuilderPattern\DataBuilder\Builder\AbstractBuilder Fluent Interface
      * @throws InvalidArgumentException
      */
     public function __unset($key)

@@ -5,8 +5,8 @@
 include_once '../vendor/autoload.php';
 include_once './Director/CustomerDirector.php';
 
-use chippyash\BuilderPattern\Example\Director\CustomerDirector;
-use chippyash\BuilderPattern\Modifier;
+use Chippyash\BuilderPattern\Example\Director\CustomerDirector;
+use Chippyash\BuilderPattern\Modifier;
 use Zend\Debug\Debug;
 
 $director = new CustomerDirector(new Modifier());

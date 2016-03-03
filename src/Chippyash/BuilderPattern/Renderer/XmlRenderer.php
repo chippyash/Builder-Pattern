@@ -7,10 +7,10 @@
  * @licence GPL V3 or later : http://www.gnu.org/licenses/gpl.html
  * @link http://en.wikipedia.org/wiki/Builder_pattern
  */
-namespace chippyash\BuilderPattern\Renderer;
+namespace Chippyash\BuilderPattern\Renderer;
 
-use chippyash\BuilderPattern\RendererInterface;
-use \chippyash\BuilderPattern\BuilderInterface;
+use Chippyash\BuilderPattern\RendererInterface;
+use \Chippyash\BuilderPattern\BuilderInterface;
 
 /**
  * Passes back the built data object converted to XML

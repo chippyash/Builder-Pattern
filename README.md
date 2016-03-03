@@ -164,7 +164,7 @@ The library supports an event driven modification system that gives you great
 control over the build process.  By default the Builders do not support this. To
 enable it you need to call the setModifier() method on the root builder, which
 will ripple it down the builder tree.  A stock modifier is provided in the form
-of chippyash\BuilderPattern\Modifier, but you can create your own by implementing
+of Chippyash\BuilderPattern\Modifier, but you can create your own by implementing
 the Zend\EventManager\EventManagerAwareInterface if you need to.
 
 If you are using the BuilderPattern in some large system you may want to instantiate
@@ -308,7 +308,7 @@ Install [Composer] (https://getcomposer.org/)
 add
 
 <pre>
-    "chippyash/builderpattern": "~1.0"
+    "chippyash/builderpattern": "~2"
 </pre>
 
 to your composer.json "requires" section.
@@ -334,7 +334,17 @@ To run the tests:
 
 Check out the other packages at [my blog site](http://the-matrix.github.io/packages/) for more PHP stuff;
 
-## Version history
+## License
+
+This software library is released under the [GNU GPL V3 or later license](http://www.gnu.org/copyleft/gpl.html)
+
+This software library is Copyright (c) 2015-2016, Ashley Kitson, UK
+
+A commercial license is available for this software library, please contact the author. 
+It is normally free to deserving causes, but gets you around the limitation of the GPL
+license, which does not allow unrestricted inclusion of this code in commercial works.
+
+## History
 
 1.0.0 - initial version
 
@@ -347,3 +357,5 @@ Check out the other packages at [my blog site](http://the-matrix.github.io/packa
 1.1.0 - new feature: allow use of closures as build items
 
 1.1.1 - make library agnostic of Zend-EventManager version
+
+2.0.0 - BC Break: change namespace from chippyash\BuilderPattern to Chippyash\BuilderPattern

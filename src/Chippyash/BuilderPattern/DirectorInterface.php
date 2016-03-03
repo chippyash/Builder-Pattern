@@ -8,10 +8,10 @@
  * @link http://en.wikipedia.org/wiki/Builder_pattern
  */
 
-namespace chippyash\BuilderPattern;
+namespace Chippyash\BuilderPattern;
 
-use chippyash\BuilderPattern\BuilderInterface;
-use chippyash\BuilderPattern\RendererInterface;
+use Chippyash\BuilderPattern\BuilderInterface;
+use Chippyash\BuilderPattern\RendererInterface;
 
 /**
  * Interface for a Builder Director
@@ -22,7 +22,7 @@ interface DirectorInterface
      * Build and render
      *
      * @return mixed Depends on rendering
-     * @throws \chippyash\BuilderPattern\Exceptions\BuilderPatternException
+     * @throws \Chippyash\BuilderPattern\Exceptions\BuilderPatternException
      */
     public function build();
 }

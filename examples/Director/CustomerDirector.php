@@ -7,17 +7,16 @@
  * @licence GPL V3 or later : http://www.gnu.org/licenses/gpl.html
  * @link http://en.wikipedia.org/wiki/Builder_pattern
  */
-namespace chippyash\BuilderPattern\Example\Director;
+namespace Chippyash\BuilderPattern\Example\Director;
 include_once './Builder/AccountBuilder.php';
 include_once './Builder/CustomerBuilder.php';
 include_once './Builder/ItemBuilder.php';
 include_once './Builder/PurchaseCollectionBuilder.php';
 
-use chippyash\BuilderPattern\AbstractDirector;
-use chippyash\BuilderPattern\Example\Builder\CustomerBuilder;
-use chippyash\BuilderPattern\Renderer\JsonRenderer;
-use chippyash\BuilderPattern\Renderer\XmlRenderer;
-use chippyash\BuilderPattern\ModifiableInterface;
+use Chippyash\BuilderPattern\AbstractDirector;
+use Chippyash\BuilderPattern\Example\Builder\CustomerBuilder;
+use Chippyash\BuilderPattern\Renderer\XmlRenderer;
+use Chippyash\BuilderPattern\ModifiableInterface;
 use Zend\EventManager\EventManagerAwareInterface;
 
 /**

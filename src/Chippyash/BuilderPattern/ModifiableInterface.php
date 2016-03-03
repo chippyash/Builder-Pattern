@@ -7,7 +7,7 @@
  * @licence GPL V3 or later : http://www.gnu.org/licenses/gpl.html
  * @link http://en.wikipedia.org/wiki/Builder_pattern
  */
-namespace chippyash\BuilderPattern;
+namespace Chippyash\BuilderPattern;
 
 use Zend\EventManager\EventManagerAwareInterface;
 
@@ -24,7 +24,7 @@ interface ModifiableInterface
      * 
      * @param EventManagerAwareInterface $modifier
      * 
-     * @return chippyash\BuilderPattern\ModifiableInterface modified Builder
+     * @return Chippyash\BuilderPattern\ModifiableInterface modified Builder
      */
     public function setModifier(EventManagerAwareInterface $modifier);
     

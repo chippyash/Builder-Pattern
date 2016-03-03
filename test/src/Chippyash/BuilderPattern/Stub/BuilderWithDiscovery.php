@@ -2,9 +2,9 @@
 /*
  * Test stubs
  */
-namespace chippyash\Test\BuilderPattern\Stub;
+namespace Chippyash\Test\BuilderPattern\Stub;
 
-use chippyash\BuilderPattern\AbstractBuilder;
+use Chippyash\BuilderPattern\AbstractBuilder;
 
 /**
  * Builder with a discovery (has) method
