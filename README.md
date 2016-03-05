@@ -1,5 +1,19 @@
 # chippyash/builder-pattern
 
+## QA
+
+Certified for PHP 5.5 - 5.6
+
+[![Build Status](https://travis-ci.org/chippyash/Builder-Pattern.svg?branch=master)](https://travis-ci.org/chippyash/Builder-Pattern)
+[![Test Coverage](https://codeclimate.com/github/chippyash/Builder-Pattern/badges/coverage.svg)](https://codeclimate.com/github/chippyash/Builder-Pattern/coverage)
+[![Code Climate](https://codeclimate.com/github/chippyash/Builder-Pattern/badges/gpa.svg)](https://codeclimate.com/github/chippyash/Builder-Pattern)
+
+The above badges represent the current development branch.  As a rule, I don't push
+ to GitHub unless tests, coverage and usability are acceptable.  This may not be
+ true for short periods of time; on holiday, need code for some other downstream
+ project etc.  If you need stable code, use a tagged version. Read 'Further Documentation'
+ and 'Installation'.
+ 
 ## What?
 
 Provides an implementation of the [Builder Pattern](http://en.wikipedia.org/wiki/Builder_pattern) 
@@ -13,11 +27,6 @@ The library is released under the [GNU GPL V3 or later license](http://www.gnu.o
 If you have [PlantUML](http://plantuml.sourceforge.net/) installed, you can view the UML diagrams in the docs folder.
 
 See the test contract in the docs folder.
-
-## QA
-
-[![Build Status](https://travis-ci.org/chippyash/Builder-Pattern.svg?branch=master)](https://travis-ci.org/chippyash/Builder-Pattern)
-[![Coverage Status](https://coveralls.io/repos/chippyash/Builder-Pattern/badge.png?branch=master)](https://coveralls.io/r/chippyash/Builder-Pattern?branch=master)
 
 ## Why
 
@@ -359,3 +368,5 @@ license, which does not allow unrestricted inclusion of this code in commercial 
 1.1.1 - make library agnostic of Zend-EventManager version
 
 2.0.0 - BC Break: change namespace from chippyash\BuilderPattern to Chippyash\BuilderPattern
+
+2.0.1 - move from coveralls to codeclimate
