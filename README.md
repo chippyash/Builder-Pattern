@@ -14,6 +14,8 @@ The above badges represent the current development branch.  As a rule, I don't p
  project etc.  If you need stable code, use a tagged version. Read 'Further Documentation'
  and 'Installation'.
  
+[Test Contract](https://github.com/chippyash/Builder-Pattern/blob/master/docs/Test-Contract.md) in the docs directory.
+
 ## What?
 
 Provides an implementation of the [Builder Pattern](http://en.wikipedia.org/wiki/Builder_pattern) 
@@ -341,7 +343,7 @@ To run the tests:
 
 ## Some other stuff
 
-Check out the other packages at [my blog site](http://the-matrix.github.io/packages/) for more PHP stuff;
+Check out [ZF4 Packages](http://zf4.biz/packages?utm_source=github&utm_medium=web&utm_campaign=blinks&utm_content=builderpattern) for more packages
 
 ## License
 
@@ -355,18 +357,20 @@ license, which does not allow unrestricted inclusion of this code in commercial 
 
 ## History
 
-1.0.0 - initial version
+1.0.0 initial version
 
-1.0.1 - integrate travis and coveralls
+1.0.1 integrate travis and coveralls
 
-1.0.2 - complete test pack
+1.0.2 complete test pack
 
-1.0.3 - add test contract
+1.0.3 add test contract
 
-1.1.0 - new feature: allow use of closures as build items
+1.1.0 new feature: allow use of closures as build items
 
-1.1.1 - make library agnostic of Zend-EventManager version
+1.1.1 make library agnostic of Zend-EventManager version
 
-2.0.0 - BC Break: change namespace from chippyash\BuilderPattern to Chippyash\BuilderPattern
+2.0.0 BC Break: change namespace from chippyash\BuilderPattern to Chippyash\BuilderPattern
 
-2.0.1 - move from coveralls to codeclimate
+2.0.1 move from coveralls to codeclimate
+
+2.0.2 Add link to packages
