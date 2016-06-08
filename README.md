@@ -1,9 +1,10 @@
 # chippyash/builder-pattern
 
-## QA
+## Quality Assurance
 
-Certified for PHP 5.5 - 5.6
-
+![PHP 5.5](https://img.shields.io/badge/PHP-5.5-blue.svg)
+![PHP 5.6](https://img.shields.io/badge/PHP-5.6-blue.svg)
+![PHP 7](https://img.shields.io/badge/PHP-7-blue.svg)
 [![Build Status](https://travis-ci.org/chippyash/Builder-Pattern.svg?branch=master)](https://travis-ci.org/chippyash/Builder-Pattern)
 [![Test Coverage](https://codeclimate.com/github/chippyash/Builder-Pattern/badges/coverage.svg)](https://codeclimate.com/github/chippyash/Builder-Pattern/coverage)
 [![Code Climate](https://codeclimate.com/github/chippyash/Builder-Pattern/badges/gpa.svg)](https://codeclimate.com/github/chippyash/Builder-Pattern)
@@ -14,7 +15,7 @@ The above badges represent the current development branch.  As a rule, I don't p
  project etc.  If you need stable code, use a tagged version. Read 'Further Documentation'
  and 'Installation'.
  
-[Test Contract](https://github.com/chippyash/Builder-Pattern/blob/master/docs/Test-Contract.md) in the docs directory.
+[Test Contract](https://github.com/chippyash/Builder-Pattern/blob/master/docs/Test-Contract.md)  (37 tests, 65 assertions) in the docs directory.
 
 ## What?
 
@@ -374,3 +375,5 @@ license, which does not allow unrestricted inclusion of this code in commercial 
 2.0.1 move from coveralls to codeclimate
 
 2.0.2 Add link to packages
+
+2.0.3 Verify PHP7 compatibility
