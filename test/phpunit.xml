@@ -37,6 +37,11 @@ testSuiteLoaderFile="/path/to/StandardTestSuiteLoader.php"
      ! blacklist and whitelist for the code coverage reporting.
      !-->
     <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../src</directory>
+            <exclude>
+            </exclude>
+        </whitelist>
         <blacklist>
             <!-- don't cover vendor directory - someone else's code! -->
             <directory>../vendor</directory>
