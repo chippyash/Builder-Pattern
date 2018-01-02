@@ -377,3 +377,5 @@ license, which does not allow unrestricted inclusion of this code in commercial 
 2.0.2 Add link to packages
 
 2.0.3 Verify PHP7 compatibility
+
+2.0.4 Update build runner

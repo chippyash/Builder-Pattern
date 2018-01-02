@@ -13,7 +13,7 @@ php:
   #- hhvm
 
 before_script:
-  - composer install --dev --no-interaction
+  - composer install --no-interaction
   - mkdir -p build/logs
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
