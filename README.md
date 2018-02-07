@@ -386,3 +386,5 @@ license, which does not allow unrestricted inclusion of this code in commercial 
 2.0.3 Verify PHP7 compatibility
 
 2.0.4 Update build runner
+
+2.0.5 update composer - forced by packagist composer.json format change
