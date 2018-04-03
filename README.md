@@ -2,7 +2,7 @@
 
 ## Quality Assurance
 
-![PHP 5.5](https://img.shields.io/badge/PHP-5.5-blue.svg)
+![PHP 5.5](https://img.shields.io/badxge/PHP-5.5-blue.svg)
 ![PHP 5.6](https://img.shields.io/badge/PHP-5.6-blue.svg)
 ![PHP 7](https://img.shields.io/badge/PHP-7-blue.svg)
 [![Build Status](https://travis-ci.org/chippyash/Builder-Pattern.svg?branch=master)](https://travis-ci.org/chippyash/Builder-Pattern)
@@ -17,12 +17,8 @@ The above badges represent the current development branch.  As a rule, I don't p
  
 [Test Contract](https://github.com/chippyash/Builder-Pattern/blob/master/docs/Test-Contract.md)  (37 tests, 65 assertions) in the docs directory.
 
-### End of life notice
-
-In March 2018, developer support will be withdrawn from this library for PHP <5.6. Older
-versions of PHP are now in such little use that the added effort of maintaining 
-compatibility is not effort effective.  See [PHP Version Stats](https://seld.be/notes/php-versions-stats-2017-1-edition)
- for the numbers.
+Please note that developer support for PHP5.5 was withdrawn at version 3.0.0 of this library.
+If you need support for PHP 5.5, please use a version `>=2,<3`
  
 ## What?
 
@@ -30,7 +26,7 @@ Provides an implementation of the [Builder Pattern](http://en.wikipedia.org/wiki
 for PHP.
 
 *  Everything has a test case
-*  It's PHP 5.5+
+*  It's PHP 5.6+
 
 The library is released under the [GNU GPL V3 or later license](http://www.gnu.org/copyleft/gpl.html)
 
@@ -327,7 +323,7 @@ Install [Composer] (https://getcomposer.org/)
 add
 
 <pre>
-    "chippyash/builderpattern": "~2"
+    "chippyash/builderpattern": ">=3,<4"
 </pre>
 
 to your composer.json "requires" section.
@@ -388,3 +384,5 @@ license, which does not allow unrestricted inclusion of this code in commercial 
 2.0.4 Update build runner
 
 2.0.5 update composer - forced by packagist composer.json format change
+
+3.0.0 BC Break. Withdraw support for older PHP versions
